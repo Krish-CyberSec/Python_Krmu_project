@@ -8,7 +8,7 @@ Description: CLI-based GradeBook Analyzer that reads student marks
              and displays summaries.
 --------------------------------------------------------''')
 
-# ---------- MENU ----------
+#MENU 
 def display_menu():
     print("\n===== GRADEBOOK ANALYZER =====")
     print("1. Enter student data manually")
@@ -16,7 +16,7 @@ def display_menu():
     choice = input("Enter your choice (1-2): ")
     return choice
 
-# ---------- INPUT STUDENT NAMES ----------
+# INPUT STUDENT NAMES 
 def input_names():
     names = []
     num_students = int(input("Enter number of students: "))
@@ -25,7 +25,7 @@ def input_names():
         names.append(name)
     return names
 
-# ---------- INPUT MARKS ----------
+#  INPUT MARKS
 def input_marks(names):
     marks = []
     for n in names:
@@ -33,14 +33,14 @@ def input_marks(names):
         marks.append(mark)
     return marks
 
-# ---------- AVERAGE ----------
+# AVERAGE 
 def calculate_average(marks):
     total = 0
     for m in marks:
         total += m
     return total / len(marks)
 
-# ---------- MEDIAN ----------
+#  MEDIAN
 def calculate_median(marks):
     sorted_marks = sorted(marks)
     n = len(sorted_marks)
@@ -49,7 +49,7 @@ def calculate_median(marks):
     else:
         return (sorted_marks[n // 2 - 1] + sorted_marks[n // 2]) / 2
 
-# ---------- GRADES ----------
+#  GRADES 
 def calculate_grades(marks):
     grade_list = []
     for m in marks:
@@ -67,7 +67,7 @@ def calculate_grades(marks):
             grade_list.append('F')
     return grade_list
 
-# ---------- TOPPER & LOWEST ----------
+#  TOPPER & LOWEST 
 def topper_and_lowest(names, marks):
     highest = max(marks)
     lowest = min(marks)
@@ -80,7 +80,7 @@ def topper_and_lowest(names, marks):
             lows.append(names[i])
     return toppers, lows
 
-# ---------- MAIN FUNCTION ----------
+#  MAIN FUNCTION 
 def main():
     while True:
         choice = display_menu()
@@ -108,5 +108,5 @@ def main():
         else:
             print("Invalid choice! Try again.")
 
-# ---------- RUN PROGRAM ----------
 main()
+
