@@ -48,7 +48,7 @@ library_inventory_project/
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/yourusername/library-inventory-manager-yourname.git
+git clone https://github.com/Krish-CyberSec/Python_Krmu_project/Python_assignment03.git
 cd library-inventory-manager-yourname
 python cli/main.py
 
