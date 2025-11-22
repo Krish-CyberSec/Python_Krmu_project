@@ -52,6 +52,6 @@ git clone https://github.com/yourusername/library-inventory-manager-yourname.git
 cd library-inventory-manager-yourname
 python cli/main.py
 
+```
 
 <img width="1102" height="915" alt="image" src="https://github.com/user-attachments/assets/ce64075f-2d93-428a-8deb-bc1223ad7d93" />
-
