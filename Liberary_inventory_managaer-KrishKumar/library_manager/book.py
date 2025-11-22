@@ -1,12 +1,14 @@
-class Book():
-    "Book management script!"
-    def __init__(self,title, author, isbn, status='available'):
-        self.title=title
-        self.author=author
-        self.isbn=isbn
-        self.status=status
+# Base class for all library items
+class LibraryItem:
+    def __init__(self, title, author, isbn, status='available'):
+        self.title = title
+        self.author = author
+        self.isbn = isbn
+        self.status = status
+
     def __str__(self):
-       return f"{self.title} by {self.author} (ISBN: {self.isbn}) - {self.status.capitalize()}"
+        return f"{self.title} by {self.author} (ISBN: {self.isbn}) - {self.status.capitalize()}"
+
     def to_dict(self):
         return {
             'title': self.title,
@@ -15,6 +17,12 @@ class Book():
             'status': self.status
         }
 
+    def is_available(self):
+        return self.status == 'available'
+
+
+# Book class inherits from LibraryItem
+class Book(LibraryItem):
     def issue(self):
         if self.status == 'available':
             self.status = 'issued'
@@ -26,6 +34,3 @@ class Book():
             self.status = 'available'
         else:
             raise Exception(f"The book {self.title} is already available.")
-
-    def is_available(self):
-        return self.status == 'available'
