@@ -1,4 +1,4 @@
-# Base class for all library items
+
 class LibraryItem:
     def __init__(self, title, author, isbn, status='available'):
         self.title = title
@@ -34,3 +34,4 @@ class Book(LibraryItem):
             self.status = 'available'
         else:
             raise Exception(f"The book {self.title} is already available.")
+
